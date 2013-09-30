@@ -8,7 +8,7 @@ int main()
     i=0;
     while(scanf("%d%d",&a,&b)!=EOF)
     {
-        if (a>b) continue;
+       // if (a>b) continue;
         ent[a]++;
         out[b]--;    
         if (a>maxv) maxv=a;
@@ -25,6 +25,7 @@ int main()
            enter=1;
            a=i;
            }
+       
         now=now+out[i];
         if (now==0 && enter==1)
            {
