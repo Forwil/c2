@@ -21,7 +21,7 @@ int main()
 		x = x+1;
 		val = cal(k*xx);
 		while(val!=cal(x)) x = x+1;
-		//printf("%d\n",x);
+		printf("%d\n",x);
 	}
 	printf("%d\n",x);
 	return 0;
