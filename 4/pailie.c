@@ -1,29 +1,53 @@
+#define MAXL 105
 #include<stdio.h>
-#define MAXN 20
-int n,m;
-void generate(int ans[],int num,int sel)
+int count[MAXL],n,len;
+char p[MAXL],ans[MAXL];
+void gen(int x,int begin)
 {
 	int i;
-	if (num!=m)
+	//printf("%s\n",ans);
+	if (x>=n)
 	{
-	for (i=0;i<n;i++)
-	if (((1 << i) & sel) == 0)
-	{
-		ans[num]=i+1;
-		generate(ans,num+1,sel | (1 << i));
+		printf("%s\n",ans);
+		return;
 	}
-	}
-	else
+	for(i = begin; i < len-count[x]+1; i++)
+	if (ans[i] == 0)
 	{
-	for (i=0;i<m;i++)
-		printf("%d ",ans[i]);
-	printf("\n");
+		count[x] -= 1;
+		ans[i] = p[x];
+		if (count[x]==0)
+			gen(x + 1,0);
+		else
+			gen(x,i + 1);
+		ans[i] = 0;
+		count[x] += 1;
 	}
 }
-int main()
+int main(void)
 {
-	int ans[MAXN];
-	scanf("%d%d",&n,&m);
-	generate(ans,0,0);
+	char c;
+	int i,j,find;
+	while((c = getchar()) != '\n' && c!=EOF)
+	{
+		find = 0;
+		for (i = 0;i < n;i++) 
+			if (p[i] == c)
+				{
+				find = 1;
+				count[i] += 1;
+				break;
+				}
+		if (find == 0)
+			{
+			p[n] = c;
+			count[n] = 1;
+			n = n + 1;
+			}
+		len += 1;
+	}
+	//for(i=0;i<n;i++)printf("%c %d\n",p[i],count[i]);
+	ans[n] = '\0';
+	gen(0,0);
 	return 0;
 }

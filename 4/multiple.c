@@ -53,7 +53,7 @@ int dfs()
 			p[w]=t;
 			if (can(w)) return w;
 		}
-	if (w>MAXN-2) return 0;
+	if (w>=MAXN) return 0;
 	}
 	return 0;
 }
@@ -80,6 +80,11 @@ int main()
 	i=0;
 	while(scanf("%d",&in[i++])!=EOF);
 	m=i-1;
+	if(m==0)
+		{
+		printf("0\n");
+		return 0;
+		}
 	for(i=0;i<m;i++)
 		for(j=i+1;j<m;j++)
 			if(in[i]>in[j])

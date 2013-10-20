@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<string.h>
 #define MAXN 202
 int  a[MAXN][MAXN],b[MAXN][MAXN],c[MAXN][MAXN];
 int len(int  x)
@@ -7,50 +8,39 @@ int len(int  x)
 	while(x/=10) i++;
 	return i;
 }
+void readargument(int a[][MAXN],int *m,int *n){
+	int i,j,temp,l;
+	char s[1000];
+	*m=0;
+	while(fgets(s,1000,stdin)!=NULL&&(l=strlen(s))>1){
+		*n=0;
+		for(i=0;i<strlen(s);i++){
+			if(s[i]>='0'&&s[i]<='9'){
+				temp=0;
+				for(j=i;i<=strlen(s);j++){
+					if(s[j]>='0'&&s[j]<='9')
+						temp=temp*10+s[j]-'0';
+					else{
+						a[*m][*n]=temp;
+						(*n)++;
+						i=j;
+						break;
+					}
+				}
+			}
+		}
+		(*m)++;
+	}
+	return;
+}
 int main()
 {
 	int n,m,k,i,j,l,maxl=0;
-	char cc;
+	char cc,s[1000];
 	freopen("arr.in","r",stdin);
-	i=0;
-	j=0;
-	while(scanf("%d",&a[i][j])!=EOF)
-	{
-		j=j+1;
-		if(getchar()=='\n')
-			{
-			m=j;
-			break;
-			}
-	}
-	while(1)
-	{
-		i=i+1;
-		cc=getc(stdin);
-		if (cc=='\n')
-			{
-				n=i;
-				break;
-			}
-		else ungetc(cc,stdin);
-		for(j=0;j<m;j++)
-			scanf("%d",&a[i][j]);
-	}
-	i=0;
-	j=0;
-	while(scanf("%d",&b[i][j])!=EOF)
-	{
-		j=j+1;
-		if(getchar()=='\n')
-		{
-			k=j;
-			break;
-		}
-	}
-	for(i=1;i<m;i++)
-		for(j=0;j<k;j++)
-			scanf("%d",&b[i][j]);
 	
+	readargument(a,&n,&m);
+	readargument(b,&m,&k);
 	for(i=0;i<n;i++)
 		for(j=0;j<k;j++)
 		{
@@ -63,7 +53,9 @@ int main()
 	for(i=0;i<n;i++)
 		for(j=0;j<k;j++)
 			{
-				printf("%*d",maxl+1,c[i][j]);
+				//printf("%*d",maxl+1,c[i][j]);
+				printf("%d ",c[i][j]);
 				if (j==k-1)printf("\n");
 			}
+	return 0;
 }
