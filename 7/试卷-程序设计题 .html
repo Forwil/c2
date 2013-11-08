@@ -1,0 +1,206 @@
+
+<!-- saved from url=(0064)http://gait.buaa.edu.cn:8765/work/jsp/showPRpage.jsp?pageId=010C -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK"><script language="javascript" src="./试卷-程序设计题 _files/currenttime.js"></script>
+<script language="javascript">
+function displayAlert(){ 
+        alert("考试将在15分后结束,请尽快提交答案 ")
+    }
+ function submitresult(){
+    document.page.write.value='1';
+    document.page.submit();
+}
+ </script>
+ 
+
+
+<title>试卷-程序设计题</title>
+<link rel="stylesheet" href="./试卷-程序设计题 _files/page.css" type="text/css">
+</head>
+<body onload="clock_start(1382500546);">
+<center>
+<a name="top"></a> <br>
+     <form name="page" method="post" action="http://gait.buaa.edu.cn:8765/servlet/servlet.UploadResult" enctype="multipart/form-data">
+     <input type="hidden" name="pageId" value="010C">
+     <input type="hidden" name="write" value="0">
+     <input type="hidden" name="userName" value="Forwil">
+    <table class="list" width="100%" cellspacing="0" cellpadding="5" height="100%">
+          <tbody><tr>
+            <td bgcolor="#009999">
+	<img src="./试卷-程序设计题 _files/write.gif" width="16" height="15" align="absmiddle">&nbsp;<b><font color="#FFFFFF">2013C语言练习七 - 01卷
+	
+	</font></b></td>
+ </tr>
+  <tr bgcolor="#E1FFFF" align="center">
+            <td valign="top">
+              <table class="noline" width="95%" cellspacing="0" cellpadding="5">
+                <tbody><tr>
+                  <td>
+
+
+
+<meta name="Generator" content="Microsoft Word 11 (filtered)">
+<title>交叉引用生成器</title>
+<style>
+<!--
+	/* Font Definitions */
+	@font-face
+	&nbsp;&nbsp;&nbsp;&nbsp;{font-family:宋体;
+	&nbsp;&nbsp;&nbsp;&nbsp;panose-1:2 1 6 0 3 1 1 1 1 1;}
+	@font-face
+	&nbsp;&nbsp;&nbsp;&nbsp;{font-family:"\@宋体";
+	&nbsp;&nbsp;&nbsp;&nbsp;panose-1:2 1 6 0 3 1 1 1 1 1;}
+	/* Style Definitions */
+	p.MsoNormal, li.MsoNormal, div.MsoNormal
+	&nbsp;&nbsp;&nbsp;&nbsp;{margin:0cm;
+	&nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:.0001pt;
+	&nbsp;&nbsp;&nbsp;&nbsp;font-size:12.0pt;
+	&nbsp;&nbsp;&nbsp;&nbsp;font-family:宋体;}
+	@page Section1
+	&nbsp;&nbsp;&nbsp;&nbsp;{size:595.3pt 841.9pt;
+	&nbsp;&nbsp;&nbsp;&nbsp;margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+	div.Section1
+	&nbsp;&nbsp;&nbsp;&nbsp;{page:Section1;}
+-->
+</style>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span style="font-size:22.0pt">交叉引用生成器</span></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span lang="EN-US" style="font-size:22.0pt">&nbsp;</span></b></p>
+
+<p class="MsoNormal">【问题描述】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">“交叉引用生成器”（cross-refrencer）是指具有如下功能的程序：&nbsp;</p>
+<p class="MsoNormal">对输入的一篇文档，统计出现的所有单词及其所在行号。将其结果以规定格式打印。</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【输入形式】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+程序从标准输入上读入一篇文档。
+该文档由若干行组成，每行中包含一系列单词。空行表示输入结束。行号由1开始计数。该文档中单词总量不超过500，每个单词长度最大不超过20个字符。
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【输出形式】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+在标准输出上打印文档中所有出现的单词及其所在行号。
+输出有若干行，每一行都是文档中出现的一个单词。按如下规格输出：
+word:line1,line2, … ,lineN
+其中word是单词，后面紧跟一个冒号，然后是以逗号隔开的出现行号line1，line2，等等。在该行上各字符紧密输出，不使用空格分隔。在输出时遵循以下规定：
+1.        只输出所有由英文字母（包括连字符）构成的单词。先输出大写A?Z开头的字符，再输出小写a?z开头的符。
+2.        各单词后面的行号从小到大排列。行号不重复打印，亦即如果一个单词在一行内多次出现，则只打印一次该行号。
+3.        统计的单词不包括冠词、连词等无实际意义的单词。在本题中涉及如下四个单词：
+   1.        a
+   2.        an
+   3.        the
+   4.        and
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【输入样例】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+Alcatel provides end-to-end solutions.
+<br>It enables enterprises to deliver content to any type of user.
+<br>lcatel operates in 130 countries.
+<br>Alcatel focus on optimizing their service offerings and revenue streams.
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【输出样例】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+Alcatel:1,4
+<br>It:2
+<br>any:2
+<br>content:2
+<br>countries:3
+<br>deliver:2
+<br>enables:2
+<br>end-to-end:1
+<br>enterprises:2
+<br>focus:4
+<br>in:3
+<br>lcatel:3
+<br>of:2
+<br>offerings:4
+<br>on:4
+<br>operates:3
+<br>optimizing:4
+<br>provides:1
+<br>revenue:4
+<br>service:4
+<br>solutions:1
+<br>streams:4
+<br>their:4
+<br>to:2
+<br>type:2
+<br>user:2
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【时间限制】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+5s
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【空间限制】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+65536KB
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【上传文件】</p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt">上传<span lang="EN-US" style="font-family:&quot;Times New Roman&quot;">c</span>语言源程序，文件名为<span lang="EN-US" style="font-family:&quot;Times New Roman&quot;">crossref.c</span>。</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+
+
+
+
+
+<br><hr size="1"><br><b>Upload Your source File(s) :</b><br><br>
+<b>Note :</b>Your program can be written with the programing language(s) as below<br>
+<ul>
+<p>
+</p><li>C(.c): your source filename is ''crossref.c''
+<p></p>
+</li></ul>
+<br>
+<input type="file" size="50" name="PR010B"><br>
+
+                  <br></td> 
+                </tr>          
+          <tr><td>       
+         <input type="image" border="0" name="imageField" src="./试卷-程序设计题 _files/submitanswer.gif" width="106" height="20">
+             &nbsp; &nbsp;&nbsp;&nbsp;
+
+         <a href="http://gait.buaa.edu.cn:8765/work/jsp/cover.jsp?examId=1B06"> <img src="./试卷-程序设计题 _files/return.gif" border="0"></a>      
+               &nbsp; &nbsp;&nbsp;&nbsp;     <a href="http://gait.buaa.edu.cn:8765/work/jsp/loginout.jsp"><img src="./试卷-程序设计题 _files/loginout.gif" height="20" border="0"></a>&nbsp;&nbsp;&nbsp;
+           <a href="http://gait.buaa.edu.cn:8765/work/jsp/downloadAnswer.jsp?pageId=010C&examId=1B06"><img src="./试卷-程序设计题 _files/downanswer.gif" border="0" align="right"></a>&nbsp;&nbsp;&nbsp;
+    </td>
+          </tr>               
+              </tbody></table>
+            </td>
+          </tr>
+        </tbody></table>
+</form>
+
+</center></body></html>

@@ -1,0 +1,175 @@
+
+<!-- saved from url=(0064)http://gait.buaa.edu.cn:8765/work/jsp/showPRpage.jsp?pageId=010E -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK"><script language="javascript" src="./试卷-程序设计题   _files/currenttime.js"></script>
+<script language="javascript">
+function displayAlert(){ 
+        alert("考试将在15分后结束,请尽快提交答案 ")
+    }
+ function submitresult(){
+    document.page.write.value='1';
+    document.page.submit();
+}
+ </script>
+ 
+
+
+<title>试卷-程序设计题</title>
+<link rel="stylesheet" href="./试卷-程序设计题   _files/page.css" type="text/css">
+</head>
+<body onload="clock_start(1382500570);">
+<center>
+<a name="top"></a> <br>
+     <form name="page" method="post" action="http://gait.buaa.edu.cn:8765/servlet/servlet.UploadResult" enctype="multipart/form-data">
+     <input type="hidden" name="pageId" value="010E">
+     <input type="hidden" name="write" value="0">
+     <input type="hidden" name="userName" value="Forwil">
+    <table class="list" width="100%" cellspacing="0" cellpadding="5" height="100%">
+          <tbody><tr>
+            <td bgcolor="#009999">
+	<img src="./试卷-程序设计题   _files/write.gif" width="16" height="15" align="absmiddle">&nbsp;<b><font color="#FFFFFF">2013C语言练习七 - 01卷
+	
+	</font></b></td>
+ </tr>
+  <tr bgcolor="#E1FFFF" align="center">
+            <td valign="top">
+              <table class="noline" width="95%" cellspacing="0" cellpadding="5">
+                <tbody><tr>
+                  <td>
+
+
+
+<meta name="Generator" content="Microsoft Word 11 (filtered)">
+<title>小数转换为分数</title>
+<style>
+<!--
+	/* Font Definitions */
+	@font-face
+	&nbsp;&nbsp;&nbsp;&nbsp;{font-family:宋体;
+	&nbsp;&nbsp;&nbsp;&nbsp;panose-1:2 1 6 0 3 1 1 1 1 1;}
+	@font-face
+	&nbsp;&nbsp;&nbsp;&nbsp;{font-family:"\@宋体";
+	&nbsp;&nbsp;&nbsp;&nbsp;panose-1:2 1 6 0 3 1 1 1 1 1;}
+	/* Style Definitions */
+	p.MsoNormal, li.MsoNormal, div.MsoNormal
+	&nbsp;&nbsp;&nbsp;&nbsp;{margin:0cm;
+	&nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:.0001pt;
+	&nbsp;&nbsp;&nbsp;&nbsp;font-size:12.0pt;
+	&nbsp;&nbsp;&nbsp;&nbsp;font-family:宋体;}
+	@page Section1
+	&nbsp;&nbsp;&nbsp;&nbsp;{size:595.3pt 841.9pt;
+	&nbsp;&nbsp;&nbsp;&nbsp;margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+	div.Section1
+	&nbsp;&nbsp;&nbsp;&nbsp;{page:Section1;}
+-->
+</style>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span style="font-size:22.0pt">小数转换为分数</span></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span lang="EN-US" style="font-size:22.0pt">&nbsp;</span></b></p>
+
+<p class="MsoNormal">【问题描述】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+将给定的有限小数或无限循环小数转换为最简分数（可为假分数）。
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【输入形式】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+从标准输入读取数据，输入数据占一行，表示一个小数。行的长度不超过100个字符，由换行符结束。有限小数由数字和一个小数点组成，例如：
+2.12
+5.69
+0.618
+ 
+无限循环小数由数字和一个小数点以及一个下划线(_)组成，循环小数的循环节从下划线后的第一个数字开始，到输入行末尾最后一个数字为止。例如：
+0._1                  表示 0.i
+3.5_142851            表示 3.5i4285i
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【输出形式】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+输出结果写到标准输出上，占一行，由数字和一个斜线组成，斜线前的数字表示分子，斜线后的数表示分母，数字和斜线之间不含空格符，输出行由换行符结束。例如：
+41/152
+7/3
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【输入样例】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+3.5_142857
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【输出样例】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+123/35
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【时间限制】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+1s
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【空间限制】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+65536KB
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【上传文件】</p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt">上传<span lang="EN-US" style="font-family:&quot;Times New Roman&quot;">c</span>语言源程序，文件名为<span lang="EN-US" style="font-family:&quot;Times New Roman&quot;">convert.c</span>。</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+
+
+
+
+
+<br><hr size="1"><br><b>Upload Your source File(s) :</b><br><br>
+<b>Note :</b>Your program can be written with the programing language(s) as below<br>
+<ul>
+<p>
+</p><li>C(.c): your source filename is ''convert.c''
+<p></p>
+</li></ul>
+<br>
+<input type="file" size="50" name="PR010D"><br>
+
+                  <br></td> 
+                </tr>          
+          <tr><td>       
+         <input type="image" border="0" name="imageField" src="./试卷-程序设计题   _files/submitanswer.gif" width="106" height="20">
+             &nbsp; &nbsp;&nbsp;&nbsp;
+
+         <a href="http://gait.buaa.edu.cn:8765/work/jsp/cover.jsp?examId=1B06"> <img src="./试卷-程序设计题   _files/return.gif" border="0"></a>      
+               &nbsp; &nbsp;&nbsp;&nbsp;     <a href="http://gait.buaa.edu.cn:8765/work/jsp/loginout.jsp"><img src="./试卷-程序设计题   _files/loginout.gif" height="20" border="0"></a>&nbsp;&nbsp;&nbsp;
+           <a href="http://gait.buaa.edu.cn:8765/work/jsp/downloadAnswer.jsp?pageId=010E&examId=1B06"><img src="./试卷-程序设计题   _files/downanswer.gif" border="0" align="right"></a>&nbsp;&nbsp;&nbsp;
+    </td>
+          </tr>               
+              </tbody></table>
+            </td>
+          </tr>
+        </tbody></table>
+</form>
+
+</center></body></html>

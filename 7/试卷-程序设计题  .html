@@ -1,0 +1,191 @@
+
+<!-- saved from url=(0064)http://gait.buaa.edu.cn:8765/work/jsp/showPRpage.jsp?pageId=010D -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK"><script language="javascript" src="./试卷-程序设计题  _files/currenttime.js"></script>
+<script language="javascript">
+function displayAlert(){ 
+        alert("考试将在15分后结束,请尽快提交答案 ")
+    }
+ function submitresult(){
+    document.page.write.value='1';
+    document.page.submit();
+}
+ </script>
+ 
+
+
+<title>试卷-程序设计题</title>
+<link rel="stylesheet" href="./试卷-程序设计题  _files/page.css" type="text/css">
+</head>
+<body onload="clock_start(1382500558);">
+<center>
+<a name="top"></a> <br>
+     <form name="page" method="post" action="http://gait.buaa.edu.cn:8765/servlet/servlet.UploadResult" enctype="multipart/form-data">
+     <input type="hidden" name="pageId" value="010D">
+     <input type="hidden" name="write" value="0">
+     <input type="hidden" name="userName" value="Forwil">
+    <table class="list" width="100%" cellspacing="0" cellpadding="5" height="100%">
+          <tbody><tr>
+            <td bgcolor="#009999">
+	<img src="./试卷-程序设计题  _files/write.gif" width="16" height="15" align="absmiddle">&nbsp;<b><font color="#FFFFFF">2013C语言练习七 - 01卷
+	
+	</font></b></td>
+ </tr>
+  <tr bgcolor="#E1FFFF" align="center">
+            <td valign="top">
+              <table class="noline" width="95%" cellspacing="0" cellpadding="5">
+                <tbody><tr>
+                  <td>
+
+
+
+<meta name="Generator" content="Microsoft Word 11 (filtered)">
+<title>内存回收</title>
+<style>
+<!--
+	/* Font Definitions */
+	@font-face
+	&nbsp;&nbsp;&nbsp;&nbsp;{font-family:宋体;
+	&nbsp;&nbsp;&nbsp;&nbsp;panose-1:2 1 6 0 3 1 1 1 1 1;}
+	@font-face
+	&nbsp;&nbsp;&nbsp;&nbsp;{font-family:"\@宋体";
+	&nbsp;&nbsp;&nbsp;&nbsp;panose-1:2 1 6 0 3 1 1 1 1 1;}
+	/* Style Definitions */
+	p.MsoNormal, li.MsoNormal, div.MsoNormal
+	&nbsp;&nbsp;&nbsp;&nbsp;{margin:0cm;
+	&nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:.0001pt;
+	&nbsp;&nbsp;&nbsp;&nbsp;font-size:12.0pt;
+	&nbsp;&nbsp;&nbsp;&nbsp;font-family:宋体;}
+	@page Section1
+	&nbsp;&nbsp;&nbsp;&nbsp;{size:595.3pt 841.9pt;
+	&nbsp;&nbsp;&nbsp;&nbsp;margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+	div.Section1
+	&nbsp;&nbsp;&nbsp;&nbsp;{page:Section1;}
+-->
+</style>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span style="font-size:22.0pt">内存回收</span></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span lang="EN-US" style="font-size:22.0pt">&nbsp;</span></b></p>
+
+<p class="MsoNormal">【问题描述】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<div>程序运行过程中可能产生没用的内存块，称为内存垃圾。需要使用内存回收技术不断检查是否存在内存垃圾，并将它们及时释放，以备后面重新使用。</div>
+<div>在内存中存在多个内存块，每一个内存块中都有一个索引表，指向和它相关联的其它内存块。有用的内存块称为“活动”的内存块。从当前已知的活动内存块出发，通过一级或多级索引能够检索到的其它内存块，也是活动的。否则该内存块就是垃圾内存块。</div>
+<div>例如，如下图所示的索引关系中，标有root的内存块1、2为已知的活动内存块。从内存块1、2出发，沿箭头方向检索，可得知3、4、5、8都是活动内存块（在图中以黄色表示）。需要回收的垃圾内存块为6、7、9、10、11。</div>
+<div>现已知有若干个内存块和它们之间的索引关系，要求编程找出所有内存垃圾。</div>
+<div><img src="./试卷-程序设计题  _files/image001.gif"></div>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【输入形式】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+输入文件为当前目录下的collect.in。
+该文件第一行为两个整数n（1≤n≤5）和m（0≤m≤50）， n表示root内存块的个数，m表示其它内存块的个数。n和m之间用空格分隔。
+后面紧跟有n+m行，每行有若干个以空格分隔的整数。第i行（1≤ i≤m+n）整数表示从第i个内存块可以直接检索到的内存块的编号，每行数字都以0结尾。其中前n行是活动的root内存块。
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【输出形式】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+输入文件为当前目录下的collect.out。
+要求在该文件中输出一行整数，是所有垃圾内存块的编号。各整数按从小到大的次序输入，之间以一个空格符分隔。
+如果没有垃圾内存块，则输出一个整数-1。
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【输入样例】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+2 9
+<br>3 4 0
+<br>4 5 0
+<br>0
+<br>8 0
+<br>0
+<br>1 0
+<br>8 10 11 0
+<br>0
+<br>0
+<br>11 0
+<br>0
+<br>
+<br>样例说明:
+<br> 
+<br>第一行输入n=2，m=9，表示共有11个内存块，其中有2个root内存块。
+<br>以后的11行分别表示了各内存块可以直接索引到的内存块编号。
+<br>计算结果如上例所示。
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【输出样例】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+6 7 9 10 11
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【时间限制】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+5s
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【空间限制】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+65536KB
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【上传文件】</p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;">&nbsp;</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt">上传<span lang="EN-US" style="font-family:&quot;Times New Roman&quot;">c</span>语言源程序，文件名为<span lang="EN-US" style="font-family:&quot;Times New Roman&quot;">collect.c</span>。</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+
+
+
+
+
+<br><hr size="1"><br><b>Upload Your source File(s) :</b><br><br>
+<b>Note :</b>Your program can be written with the programing language(s) as below<br>
+<ul>
+<p>
+</p><li>C(.c): your source filename is ''collect.c''
+<p></p>
+</li></ul>
+<br>
+<input type="file" size="50" name="PR010C"><br>
+
+                  <br></td> 
+                </tr>          
+          <tr><td>       
+         <input type="image" border="0" name="imageField" src="./试卷-程序设计题  _files/submitanswer.gif" width="106" height="20">
+             &nbsp; &nbsp;&nbsp;&nbsp;
+
+         <a href="http://gait.buaa.edu.cn:8765/work/jsp/cover.jsp?examId=1B06"> <img src="./试卷-程序设计题  _files/return.gif" border="0"></a>      
+               &nbsp; &nbsp;&nbsp;&nbsp;     <a href="http://gait.buaa.edu.cn:8765/work/jsp/loginout.jsp"><img src="./试卷-程序设计题  _files/loginout.gif" height="20" border="0"></a>&nbsp;&nbsp;&nbsp;
+           <a href="http://gait.buaa.edu.cn:8765/work/jsp/downloadAnswer.jsp?pageId=010D&examId=1B06"><img src="./试卷-程序设计题  _files/downanswer.gif" border="0" align="right"></a>&nbsp;&nbsp;&nbsp;
+    </td>
+          </tr>               
+              </tbody></table>
+            </td>
+          </tr>
+        </tbody></table>
+</form>
+
+</center></body></html>

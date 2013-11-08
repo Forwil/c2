@@ -1,0 +1,166 @@
+
+<!-- saved from url=(0064)http://gait.buaa.edu.cn:8765/work/jsp/showPRpage.jsp?pageId=010F -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK"><script language="javascript" src="./试卷-程序设计题    _files/currenttime.js"></script>
+<script language="javascript">
+function displayAlert(){ 
+        alert("考试将在15分后结束,请尽快提交答案 ")
+    }
+ function submitresult(){
+    document.page.write.value='1';
+    document.page.submit();
+}
+ </script>
+ 
+
+
+<title>试卷-程序设计题</title>
+<link rel="stylesheet" href="./试卷-程序设计题    _files/page.css" type="text/css">
+</head>
+<body onload="clock_start(1382500571);" lang="ZH-CN" style="text-justify-trim:punctuation">
+<center>
+<a name="top"></a> <br>
+     <form name="page" method="post" action="http://gait.buaa.edu.cn:8765/servlet/servlet.UploadResult" enctype="multipart/form-data">
+     <input type="hidden" name="pageId" value="010F">
+     <input type="hidden" name="write" value="0">
+     <input type="hidden" name="userName" value="Forwil">
+    <table class="list" width="100%" cellspacing="0" cellpadding="5" height="100%">
+          <tbody><tr>
+            <td bgcolor="#009999">
+	<img src="./试卷-程序设计题    _files/write.gif" width="16" height="15" align="absmiddle">&nbsp;<b><font color="#FFFFFF">2013C语言练习七 - 01卷
+	
+	</font></b></td>
+ </tr>
+  <tr bgcolor="#E1FFFF" align="center">
+            <td valign="top">
+              <table class="noline" width="95%" cellspacing="0" cellpadding="5">
+                <tbody><tr>
+                  <td>
+
+
+
+<meta name="Generator" content="Microsoft Word 11 (filtered)">
+<title>矩阵乘法C</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+&nbsp;&nbsp;&nbsp;&nbsp;{font-family:宋体;
+&nbsp;&nbsp;&nbsp;&nbsp;panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+&nbsp;&nbsp;&nbsp;&nbsp;{font-family:"\@宋体";
+&nbsp;&nbsp;&nbsp;&nbsp;panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+&nbsp;&nbsp;&nbsp;&nbsp;{margin:0cm;
+&nbsp;&nbsp;&nbsp;&nbsp;margin-bottom:.0001pt;
+&nbsp;&nbsp;&nbsp;&nbsp;font-size:12.0pt;
+&nbsp;&nbsp;&nbsp;&nbsp;font-family:宋体;}
+@page Section1
+&nbsp;&nbsp;&nbsp;&nbsp;{size:595.3pt 841.9pt;
+&nbsp;&nbsp;&nbsp;&nbsp;margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+div.Section1
+&nbsp;&nbsp;&nbsp;&nbsp;{page:Section1;}
+-->
+</style>
+
+
+
+
+
+<div class="Section1">
+
+<div>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span style="font-size:22.0pt">矩阵乘法C</span></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b><span lang="EN-US" style="font-size:22.0pt">&nbsp;</span></b></p>
+
+<p class="MsoNormal">【问题描述】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt">大矩阵乘法。</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【输入形式】</p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt">文件arr.in中读入一个m行k列的整数矩阵a和一个k行n列的整数矩阵b(0 &lt; m, k, n &lt; 200000, m * k &lt; 2000000, k * n &lt; 3000000, m * n &lt; 5000000)。文件arr.in中有m + k行，前m行是矩阵a的元素a<sub>ij</sub>，后k行是矩阵b的元素b<sub>ij</sub>(-3000 &lt; a<sub>ij</sub>, b<sub>ij</sub> &lt; 3000)。每行中相邻的两个元素之间以一个或多个空白符分隔。</p>
+
+<p class="MsoNormal">【输出形式】</p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt">在标准输出上输出这两个矩阵的乘积。输出结果为m行n列的矩阵，按整数右对齐方式输出，各列等宽，并保证矩阵中最长元素与其左侧的元素之间只有1个空格。当最长元素位于第一列时，在该元素前留1个空格。(注意：在输出时，要严格计算相邻元素之间的空格个数)</p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【输入样例】</p>
+<p class="MsoNormal">
+<span lang="EN-US">
+</span></p><pre>12 89
+2  8
+1 2 3
+2  2 4
+</pre>
+
+<p></p>
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+<p class="MsoNormal">【输出样例】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<span lang="EN-US">
+<pre> 190 202 392
+  18  20  38
+</pre>
+</span>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【运行时限】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;&nbsp;&nbsp; 200</span>秒</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal">【上传文件】</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal" style="text-indent:21.0pt">上传<span lang="EN-US">C</span>语言源程序，以<span lang="EN-US">arr.c</span>命名。</p>
+
+<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+</div>
+
+</div>
+
+
+
+
+<br><hr size="1"><br><b>Upload Your source File(s) :</b><br><br>
+<b>Note :</b>Your program can be written with the programing language(s) as below<br>
+<ul>
+<li>C(.c): your source filename is ``arr.c''
+</li></ul>
+<br>
+<input type="file" size="50" name="PR010F"><br>
+
+                  <br></td> 
+                </tr>          
+          <tr><td>       
+         <input type="image" border="0" name="imageField" src="./试卷-程序设计题    _files/submitanswer.gif" width="106" height="20">
+             &nbsp; &nbsp;&nbsp;&nbsp;
+
+         <a href="http://gait.buaa.edu.cn:8765/work/jsp/cover.jsp?examId=1B06"> <img src="./试卷-程序设计题    _files/return.gif" border="0"></a>      
+               &nbsp; &nbsp;&nbsp;&nbsp;     <a href="http://gait.buaa.edu.cn:8765/work/jsp/loginout.jsp"><img src="./试卷-程序设计题    _files/loginout.gif" height="20" border="0"></a>&nbsp;&nbsp;&nbsp;
+           <a href="http://gait.buaa.edu.cn:8765/work/jsp/downloadAnswer.jsp?pageId=010F&examId=1B06"><img src="./试卷-程序设计题    _files/downanswer.gif" border="0" align="right"></a>&nbsp;&nbsp;&nbsp;
+    </td>
+          </tr>               
+              </tbody></table>
+            </td>
+          </tr>
+        </tbody></table>
+</form>
+
+</center></body></html>
